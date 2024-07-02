@@ -1,0 +1,31 @@
+@model PersoneDetailViewModel
+
+<section>
+
+    <div>
+        <ul>
+            <li>nome: @Model.nome</li>
+            <li>cognome: @Model.cognome</li>
+            <li>età: @Model.eta</li>
+        </ul>
+    </div>
+</section>
+<section>
+    <h2>Auto(@Model.Auto.Count)</h2>
+    @foreach (var auto in Model.Auto)
+    {
+        <hr>
+        <div>
+            <div>
+                <a href="#">@auto.marca</a>
+            </div>
+            <div>
+                <a href="#">@auto.modello</a>
+            </div>
+            <div>
+                <a href="#">@auto.targa</a>
+            </div>
+        </div>
+    }
+
+</section>

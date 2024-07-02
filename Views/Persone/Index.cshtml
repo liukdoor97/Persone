@@ -1,0 +1,16 @@
+@model List<PersoneViewModel>    
+<h1>
+    Lista delle Persone
+</h1>
+@foreach (PersoneViewModel persona in Model){
+    <div>
+        <ul>
+            <li>nome: @persona.nome</li>
+            <li>cognome: @persona.cognome</li>
+            <li>età: @persona.eta</li>
+        </ul>
+    </div>
+    <div class="col-md-2 d-flex align-items-center">
+            <a class="btn btn-outline-primary" asp-action="Detail" asp-route-id="@persona.Id">Dettaglio</a>
+        </div>
+}
