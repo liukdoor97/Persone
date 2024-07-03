@@ -44,8 +44,10 @@ namespace Persone.Models.Services.Application
             // lista macchine per persona con limite 10
             for (var i = 1; i <= 10; i++)
             {
+
                 var auto = new AutoViewModel
                 {
+                    idAuto = rand.Next(),
                     marca = "Fiat",
                     modello = "Cinquecento",
                     targa = "BA 123 CD"

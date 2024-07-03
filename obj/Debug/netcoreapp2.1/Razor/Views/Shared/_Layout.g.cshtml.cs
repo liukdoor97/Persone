@@ -67,7 +67,7 @@ using Persone.Models.ViewModels;
             WriteLiteral("\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n");
             EndContext();
             BeginContext(3486, 641, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "50294958aa704cc48f6204317817199c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "19c988ebdbcc4588b63d08051b17380c", async() => {
                 BeginContext(3492, 545, true);
                 WriteLiteral(@"
     <meta charset=""UTF-8"">
@@ -79,7 +79,7 @@ using Persone.Models.ViewModels;
     ");
                 EndContext();
                 BeginContext(4037, 42, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "15ee58503e304323a4486a9e9a197dd7", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "d1b8a38f19664d03adb54e45edf40ba8", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -123,7 +123,7 @@ using Persone.Models.ViewModels;
             WriteLiteral("\r\n\r\n");
             EndContext();
             BeginContext(4131, 1801, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "096df19e8d7f401bae75b7628cd4fcd3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c9aded5bb143465ca31fbe4d0dfaccc1", async() => {
                 BeginContext(4137, 526, true);
                 WriteLiteral(@"
 
@@ -141,7 +141,7 @@ using Persone.Models.ViewModels;
                         ");
                 EndContext();
                 BeginContext(4663, 69, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "df97d47b2b2b41a380552e49039c54c7", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "29e5150f027c4540b0390391500705d6", async() => {
                     BeginContext(4724, 4, true);
                     WriteLiteral("Home");
                     EndContext();
@@ -166,7 +166,7 @@ using Persone.Models.ViewModels;
                 WriteLiteral("\r\n                    </li>\r\n                    <li class=\"nav-item active\">\r\n                        ");
                 EndContext();
                 BeginContext(4835, 81, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2146a357f6644f70b728262acb256c79", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "edddec1f1e614ddabd677fbfdc27a788", async() => {
                     BeginContext(4899, 13, true);
                     WriteLiteral("Lista Persone");
                     EndContext();

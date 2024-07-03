@@ -108,7 +108,7 @@ Write(ViewData["Title"]);
             WriteLiteral("</li>\r\n        </ul>\r\n    </div>\r\n    <div class=\"col-md-2 d-flex align-items-center\">\r\n            ");
             EndContext();
             BeginContext(367, 95, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c7504b50621c401dbc48f54b1e755642", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fb75d270f825417d95ea662ac512a1bf", async() => {
                 BeginContext(449, 9, true);
                 WriteLiteral("Dettaglio");
                 EndContext();

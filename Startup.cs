@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Persone.Models.Services.Application;
+using Persone.Models.Services.Infrastructure;
 
 namespace Persone
 {
@@ -36,7 +37,9 @@ namespace Persone
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             // sto indicando ad ASP.NET Core che, quando un componente dipende dall'interfaccia ICourseService
             // crea un oggetto della classe CourseService
-            services.AddTransient<IPersoneService, PersoneService>();
+            // services.AddTransient<IPersoneService, PersoneService>();
+            services.AddTransient<IPersoneService, AdoNetPersonaService>();
+            services.AddTransient<IDatabaseAccessor, SqliteDatabaseAccessor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,7 +48,14 @@ namespace Persone
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
+                // lifetime.ApplicationStarted.Register(()=>{
+                //     string filePath = Path.Combine(env.ContentRootPath, "bin/reload.txt");
+                //     File.WriteAllText(filePath, DataTime.Now.ToString());
+                // });
+
             }
+                
             else
             {
                 app.UseExceptionHandler("/Home/Error");
