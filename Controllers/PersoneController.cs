@@ -17,6 +17,7 @@ namespace Persone.Controllers
 
         public IActionResult Index()
         {
+            ViewData["Title"] = "Lista delle persone";
             var personeService = new PersoneService();//Il controller crea un oggetto del servizio applicativo che deve utilizzare
             List<PersoneViewModel> persone = personeService.GetPersone();//recupero la lista delle persone
             return View(persone);//passo l'oggetto contenente la lista dei corsi alla view per mostrare i dati
@@ -28,6 +29,7 @@ namespace Persone.Controllers
         {
             var personeService = new PersoneService();
             PersoneViewModel viewModel = personeService.GetPersona(id);
+            ViewData["Title"] = viewModel.nome;
             return View(viewModel);
         }
 
