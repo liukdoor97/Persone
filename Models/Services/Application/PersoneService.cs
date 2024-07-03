@@ -6,8 +6,9 @@ using Persone.Models.ViewModels;
 
 namespace Persone.Models.Services.Application
 {
-    public class PersoneService
+    public class PersoneService : IPersoneService
     {
+        //metodo che deve tornare la lista delle persone 
         public List<PersoneViewModel> GetPersone()
         {
             var listaPersone = new List<PersoneViewModel>();//oggetto che conterrà la lista delle persone

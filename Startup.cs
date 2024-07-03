@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Persone.Models.Services.Application;
 
 namespace Persone
 {
@@ -33,6 +34,9 @@ namespace Persone
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            // sto indicando ad ASP.NET Core che, quando un componente dipende dall'interfaccia ICourseService
+            // crea un oggetto della classe CourseService
+            services.AddTransient<IPersoneService, PersoneService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
