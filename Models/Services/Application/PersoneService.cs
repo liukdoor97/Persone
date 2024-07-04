@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Persone.Models.ViewModels;
+using Persone.Models.Services.Infrastructure;
 
 namespace Persone.Models.Services.Application
 {
@@ -47,7 +48,7 @@ namespace Persone.Models.Services.Application
 
                 var auto = new AutoViewModel
                 {
-                    idAuto = rand.Next(),
+                    id = rand.Next(),
                     marca = "Fiat",
                     modello = "Cinquecento",
                     targa = "BA 123 CD"
