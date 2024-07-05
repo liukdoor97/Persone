@@ -32,3 +32,4 @@ D:\SER\PROGETTI\Persone\obj\Debug\netcoreapp2.1\Persone.pdb
 D:\SER\PROGETTI\Persone\obj\Debug\netcoreapp2.1\Persone.csproj.CopyComplete
 D:\SER\PROGETTI\Persone\obj\Debug\netcoreapp2.1\Razor\Views\Persone\Detail.g.cshtml.cs
 D:\SER\PROGETTI\Persone\obj\Debug\netcoreapp2.1\Razor\Views\Persone\Index.g.cshtml.cs
+D:\SER\PROGETTI\Persone\obj\Debug\netcoreapp2.1\Razor\Views\Persone\create.g.cshtml.cs

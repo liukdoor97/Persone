@@ -1,6 +1,8 @@
 @model List<PersoneViewModel>    
 <h1>
     @ViewData["Title"]
+        <a class="btn btn-outline-primary btn-sm" asp-action="Create"><i class="fa fa-plus"></i> Crea nuova</a>
+
 </h1>
 @foreach (PersoneViewModel persona in Model){
     <div>

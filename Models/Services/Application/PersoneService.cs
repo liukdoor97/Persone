@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Persone.Models.ViewModels;
-using Persone.Models.Services.Infrastructure;
+using Persone.Models.InputModels;
 
 namespace Persone.Models.Services.Application
 {
@@ -57,6 +57,11 @@ namespace Persone.Models.Services.Application
             }
 
             return persona;
+        }
+
+        public PersoneDetailViewModel CreatePersona(PersonaCreateInputModel input)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Persone.Models.Services.Application;
 using Persone.Models.ViewModels;
+using Persone.Models.InputModels;
 
 namespace Persone.Controllers
 {
@@ -33,8 +34,23 @@ namespace Persone.Controllers
         {
             //var personeService = new PersoneService();
             PersoneViewModel viewModel = personeService.GetPersona(id);
-            ViewData["Title"] = viewModel.nome;
+            ViewData["Title"] = $"{viewModel.nome} {viewModel.cognome}";
             return View(viewModel);
+        }
+
+         public IActionResult Create()
+        {
+            ViewData["Title"] = "Nuova persona";
+            var input = new PersonaCreateInputModel();
+            return View(input);
+        }
+
+        [HttpPost]
+        public IActionResult Create(PersonaCreateInputModel input)
+        {
+            ViewData["Title"] = "Nuova persona";
+            PersoneDetailViewModel persona = personeService.CreatePersona(input);//metodo che deve eseguire la query INSERT INTO nel db usando i dati che ho inserito nel form
+            return RedirectToAction(nameof(Index));
         }
 
     }
