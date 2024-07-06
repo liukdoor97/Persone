@@ -95,7 +95,7 @@ using Persone.Models.InputModels;
             WriteLiteral("</li>\r\n        </ul>\r\n    </div>\r\n    <div>");
             EndContext();
             BeginContext(229, 129, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3a115c63dc2448049ada82ebecde082b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6f7a4b97a0c7495a9dd281918f3558a3", async() => {
                 BeginContext(314, 40, true);
                 WriteLiteral("<i class=\"fa fa-plus\"></i> Modifica dati");
                 EndContext();
