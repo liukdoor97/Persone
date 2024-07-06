@@ -8,7 +8,16 @@
             <li>Età: @Model.eta</li>
         </ul>
     </div>
-    <div><a class="btn btn-outline-primary btn-sm" asp-action="Edit" asp-route-id="@Model.Id"><i class="fa fa-plus"></i> Modifica dati</a></div>
+    <div><a class="btn btn-outline-primary btn-sm" asp-action="Edit" asp-route-id="@Model.Id"><i class="fa fa-plus"></i>
+            Modifica dati</a></div>
+    <form method="post" asp-action="Delete" asp-route-id="@Model.Id">
+
+        <div><button class="btn btn-outline-primary btn-sm"><i
+                    class="fa fa-plus"></i>
+                Elimina Persona</button></div>
+    </form>
+
+
 </section>
 <section>
     <h2>Auto(@Model.Auto.Count)</h2>

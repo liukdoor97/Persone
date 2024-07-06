@@ -96,7 +96,7 @@ namespace Persone.Models.Services.Application
             return personaEditInputModel;
         }
 
-         public PersoneDetailViewModel EditPersona(PersonaEditInputModel inputModel)
+        public PersoneDetailViewModel EditPersona(PersonaEditInputModel inputModel)
         {
 
             FormattableString query = $@"UPDATE persona set nome = {inputModel.nome}, cognome = {inputModel.cognome}, eta = {inputModel.eta.ToString()} WHERE id = {inputModel.id.ToString()};
@@ -105,6 +105,15 @@ namespace Persone.Models.Services.Application
             int Id = Convert.ToInt32(dataSet.Tables[0].Rows[0][0]);
             PersoneDetailViewModel persona = GetPersona(Id);
             return persona;
+        }
+
+        public void DeletePersona(PersonaDeleteInputModel inputModel)
+        {
+            FormattableString query = $@"DELETE FROM persona WHERE id = {inputModel.id.ToString()};
+            SELECT id, nome, cognome, eta FROM persona;";
+            var dataSet = db.Query(query);
+            var dataTable = dataSet.Tables[0];
+            var personeList = new List<PersoneViewModel>();
         }
 
     }

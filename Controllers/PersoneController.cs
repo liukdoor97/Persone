@@ -65,12 +65,19 @@ namespace Persone.Controllers
         {
             if (ModelState.IsValid)
             {
-                    PersoneDetailViewModel persona = personeService.EditPersona(inputModel);
-                    return RedirectToAction(nameof(Detail), new { id = inputModel.id });
+                PersoneDetailViewModel persona = personeService.EditPersona(inputModel);
+                return RedirectToAction(nameof(Detail), new { id = inputModel.id });
             }
 
             ViewData["Title"] = "Modifica persona";
             return View(inputModel);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(PersonaDeleteInputModel inputModel)
+        {
+            personeService.DeletePersona(inputModel);
+            return RedirectToAction(nameof(Index));
         }
     }
 }

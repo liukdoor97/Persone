@@ -72,5 +72,9 @@ namespace Persone.Models.Services.Application
         {
             throw new NotImplementedException();
         }
+        public void DeletePersona(PersonaDeleteInputModel inputModel)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
