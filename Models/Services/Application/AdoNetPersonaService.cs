@@ -71,9 +71,37 @@ namespace Persone.Models.Services.Application
             string nome = input.nome;
             string cognome = input.cognome;
             string eta = input.eta.ToString();
-            
+
             var dataSet = db.Query($@"INSERT INTO persona (nome, cognome, eta) VALUES ({nome}, {cognome}, {eta});
             SELECT last_insert_rowid();");
+            int Id = Convert.ToInt32(dataSet.Tables[0].Rows[0][0]);
+            PersoneDetailViewModel persona = GetPersona(Id);
+            return persona;
+        }
+
+        public PersonaEditInputModel GetPersonaForEditing(int id)
+        {
+            //In un'unica variabile string io inserisco tutte le query che devono essere eseguite
+            FormattableString query = $@"SELECT id, nome, cognome, eta FROM persona WHERE id = {id};";
+            //in questo dataSet ci sarà una tabella con i dati della persona dell'id selezionato
+            DataSet dataSet = db.Query(query);
+            var personaDataTable = dataSet.Tables[0]; //accedo dal dataSet alla tabella che è stata restituita dall'esecuzione della query
+            if (personaDataTable.Rows.Count != 1) //sto controllando se la tabella ha recuperato esattamente una data persona
+            {
+                throw new InvalidOperationException($"Persona con id = {id} non trovata");
+            }
+            var personaRow = personaDataTable.Rows[0];//accedo alla prima riga della tabella
+            var personaEditInputModel = PersonaEditInputModel.FromDataRow(personaRow);
+
+            return personaEditInputModel;
+        }
+
+         public PersoneDetailViewModel EditPersona(PersonaEditInputModel inputModel)
+        {
+
+            FormattableString query = $@"UPDATE persona set nome = {inputModel.nome}, cognome = {inputModel.cognome}, eta = {inputModel.eta.ToString()} WHERE id = {inputModel.id.ToString()};
+            SELECT id, nome, cognome, eta FROM persona WHERE id = {inputModel.id.ToString()};";
+            var dataSet = db.Query(query);
             int Id = Convert.ToInt32(dataSet.Tables[0].Rows[0][0]);
             PersoneDetailViewModel persona = GetPersona(Id);
             return persona;

@@ -1,3 +1,4 @@
+@model PersoneDetailViewModel
 <section>
 
     <div>
@@ -7,6 +8,7 @@
             <li>Età: @Model.eta</li>
         </ul>
     </div>
+    <div><a class="btn btn-outline-primary btn-sm" asp-action="Edit" asp-route-id="@Model.Id"><i class="fa fa-plus"></i> Modifica dati</a></div>
 </section>
 <section>
     <h2>Auto(@Model.Auto.Count)</h2>

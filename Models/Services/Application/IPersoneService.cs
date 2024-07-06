@@ -12,5 +12,7 @@ namespace Persone.Models.Services.Application
         List<PersoneViewModel> GetPersone();
         PersoneDetailViewModel GetPersona(int id);
         PersoneDetailViewModel CreatePersona(PersonaCreateInputModel input);
+        PersonaEditInputModel GetPersonaForEditing(int id);
+        PersoneDetailViewModel EditPersona(PersonaEditInputModel inputModel);
     }
 }

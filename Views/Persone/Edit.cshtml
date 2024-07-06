@@ -1,0 +1,25 @@
+@model PersonaEditInputModel;
+
+<h1>@ViewData["Title"]</h1>
+<form method="post">
+    <div class="row">
+        <div class="col-md-3 mb-3">
+            <input type="text" value="@Model.nome" asp-for="nome" class="form-control form-control-lg"
+                @* placeholder="Digita il nome" *@
+                >
+        </div>
+         <div class="col-md-3 mb-3">
+            <input type="text" value="@Model.cognome" asp-for="cognome" class="form-control form-control-lg"
+                @* placeholder="Digita il cognome" *@
+                >
+        </div>
+         <div class="col-md-3 mb-3">
+            <input type="text" value="@Model.eta" asp-for="eta" class="form-control form-control-lg"
+                @* placeholder="Digita l'età" *@
+                >
+        </div>
+        <div class="col-md-3">
+            <button type="submit" class="btn btn-primary btn-lg btn-block"><i class="fas fa-rocket"></i> Modifica persona!</button>
+        </div>
+    </div>
+</form>

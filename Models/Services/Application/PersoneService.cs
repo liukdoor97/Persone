@@ -63,5 +63,14 @@ namespace Persone.Models.Services.Application
         {
             throw new NotImplementedException();
         }
+
+        public PersonaEditInputModel GetPersonaForEditing(int id)
+        {
+            throw new NotImplementedException();
+        }
+        public PersoneDetailViewModel EditPersona(PersonaEditInputModel inputModel)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

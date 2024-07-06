@@ -38,7 +38,7 @@ namespace Persone.Controllers
             return View(viewModel);
         }
 
-         public IActionResult Create()
+        public IActionResult Create()
         {
             ViewData["Title"] = "Nuova persona";
             var input = new PersonaCreateInputModel();
@@ -53,5 +53,24 @@ namespace Persone.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        public IActionResult Edit(int id)
+        {
+            ViewData["Title"] = "Modifica persona";
+            PersonaEditInputModel inputModel = personeService.GetPersonaForEditing(id);// metodo che deve recuperare l'id della persona da modificare
+            return View(inputModel);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(PersonaEditInputModel inputModel)
+        {
+            if (ModelState.IsValid)
+            {
+                    PersoneDetailViewModel persona = personeService.EditPersona(inputModel);
+                    return RedirectToAction(nameof(Detail), new { id = inputModel.id });
+            }
+
+            ViewData["Title"] = "Modifica persona";
+            return View(inputModel);
+        }
     }
 }
