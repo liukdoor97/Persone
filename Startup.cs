@@ -35,11 +35,12 @@ namespace Persone
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            // sto indicando ad ASP.NET Core che, quando un componente dipende dall'interfaccia ICourseService
-            // crea un oggetto della classe CourseService
+            // sto indicando ad ASP.NET Core che, quando un componente dipende dall'interfaccia IPersoneService
+            // crea un oggetto della classe PersoneService
             // services.AddTransient<IPersoneService, PersoneService>();
             services.AddTransient<IPersoneService, AdoNetPersonaService>();
             services.AddTransient<IDatabaseAccessor, SqliteDatabaseAccessor>();
+            services.AddTransient<IAutoService, AdoNetAutoService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

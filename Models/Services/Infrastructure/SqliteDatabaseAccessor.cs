@@ -11,21 +11,21 @@ namespace Persone.Models.Services.Infrastructure
     {
         public DataSet Query(FormattableString formattableQuery)
         {
-                //dato che SqliteCommand accetta come parametro query una stringa
-                //devo per forza convertire la FormattableString in string
-                var queryArguments = formattableQuery.GetArguments();//recupero gli argomenti della query  -> torna un array di SqliteParameter
-                var sqliteParameters = new List<SqliteParameter>();//creo una lista di argomenti per ogni argomento revuperato dalla query
+            //dato che SqliteCommand accetta come parametro query una stringa
+            //devo per forza convertire la FormattableString in string
+            var queryArguments = formattableQuery.GetArguments();//recupero gli argomenti della query  -> torna un array di SqliteParameter
+            var sqliteParameters = new List<SqliteParameter>();//creo una lista di argomenti per ogni argomento revuperato dalla query
 
-                for (var i = 0; i < queryArguments.Length; i++)
-                {
-                    //Il costruttore di SqliteParameter vuole un valore numerico come string e il valore da iniettare nella query
-                    var parameter = new SqliteParameter(i.ToString(), queryArguments[i]);
-                    sqliteParameters.Add(parameter);
-                    queryArguments[i] = "@" + i;
+            for (var i = 0; i < queryArguments.Length; i++)
+            {
+                //Il costruttore di SqliteParameter vuole un valore numerico come string e il valore da iniettare nella query
+                var parameter = new SqliteParameter(i.ToString(), queryArguments[i]);
+                sqliteParameters.Add(parameter);
+                queryArguments[i] = "@" + i;
 
-                }
+            }
 
-                string query = formattableQuery.ToString();
+            string query = formattableQuery.ToString();
 
             using (var conn = new SqliteConnection("Data Source=Data/persona.db"))
             {
@@ -52,6 +52,36 @@ namespace Persone.Models.Services.Infrastructure
                 //conn.Dispose();
             }
 
+        }
+
+        public int Command(FormattableString formattableCommand)
+        {
+            //dato che SqliteCommand accetta come parametro query una stringa
+            //devo per forza convertire la FormattableString in string
+            var queryArguments = formattableCommand.GetArguments();//recupero gli argomenti della query  -> torna un array di SqliteParameter
+            var sqliteParameters = new List<SqliteParameter>();//creo una lista di argomenti per ogni argomento revuperato dalla query
+            for (var i = 0; i < queryArguments.Length; i++)
+            {
+                //Il costruttore di SqliteParameter vuole un valore numerico come string e il valore da iniettare nella query
+                var parameter = new SqliteParameter(i.ToString(), queryArguments[i]);
+                sqliteParameters.Add(parameter);
+                queryArguments[i] = "@" + i;
+
+            }
+
+            string query = formattableCommand.ToString();
+            using (var conn = new SqliteConnection("Data Source=Data/persona.db"))
+            {
+                conn.Open();
+                using (var cmd = new SqliteCommand(query, conn))
+                {
+
+                    //tramite il metodo AddRange aggiungo tutti i parametri recuperati dalla query
+                    cmd.Parameters.AddRange(sqliteParameters);
+                    int affectedRows = cmd.ExecuteNonQuery();
+                    return affectedRows;
+                }
+            }
         }
     }
 }

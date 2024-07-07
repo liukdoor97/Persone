@@ -20,19 +20,22 @@
 
 </section>
 <section>
+        <a class="btn btn-outline-primary btn-sm" asp-controller= "Auto" asp-action="Create" asp-route-id="@Model.Id"><i class="fa fa-plus"></i> Aggiungi una nuova auto</a>
+</section>
+<section>
     <h2>Auto(@Model.Auto.Count)</h2>
     @foreach (var auto in Model.Auto)
     {
         <hr>
         <div>
             <div>
-                <a>@auto.marca</a>
+                Marca: <a>@auto.marca</a>
             </div>
             <div>
-                <a>@auto.modello</a>
+                Modello: <a>@auto.modello</a>
             </div>
             <div>
-                <a>@auto.targa</a>
+                Targa: <a>@auto.targa</a>
             </div>
         </div>
     }

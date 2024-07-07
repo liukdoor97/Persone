@@ -29,12 +29,17 @@ using Persone.Models.ViewModels;
 #line default
 #line hidden
 #line 4 "D:\SER\PROGETTI\Persone\Views\_ViewImports.cshtml"
-using Persone.Models.InputModels;
+using Persone.Models.InputModels.Persone;
+
+#line default
+#line hidden
+#line 5 "D:\SER\PROGETTI\Persone\Views\_ViewImports.cshtml"
+using Persone.Models.InputModels.Auto;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f5989146c20e297d05361cc87bf290b8b98e9284", @"/Views/Home/About.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"146cc14981a772db108c38cd0bd5810d2e0b9137", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"494c0b8cb83c724ff707f9066e3f07745103b566", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_About : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Persone.Models.Services.Application;
 using Persone.Models.ViewModels;
-using Persone.Models.InputModels;
+using Persone.Models.InputModels.Persone;
 
 namespace Persone.Controllers
 {
