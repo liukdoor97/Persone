@@ -1,0 +1,24 @@
+@model AutoCreateInputModel;
+
+<h1>@ViewData["Title"]</h1>
+<form method="post">
+    <input type="hidden" asp-for="personaId">
+    <div class="row">
+        <div class="col-md-3 mb-3">
+            <input type="text" asp-for="marca" class="form-control form-control-lg"
+                placeholder="Digita la marca">
+        </div>
+         <div class="col-md-3 mb-3">
+            <input type="text" asp-for="modello" class="form-control form-control-lg"
+                placeholder="Digita il modello">
+        </div>
+         <div class="col-md-3 mb-3">
+            <input type="text" asp-for="targa" class="form-control form-control-lg"
+                placeholder="Digita la targa">
+        </div>
+        <div class="col-md-3">
+            <button type="submit" class="btn btn-primary btn-lg btn-block"><i class="fas fa-rocket"></i> Crea
+                Auto!</button>
+        </div>
+    </div>
+</form>

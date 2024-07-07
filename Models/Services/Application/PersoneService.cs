@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Persone.Models.ViewModels;
-using Persone.Models.InputModels;
+using Persone.Models.InputModels.Persone;
 
 namespace Persone.Models.Services.Application
 {

@@ -14,7 +14,7 @@ namespace Persone.Models.ViewModels
         public string marca {get; set;}
         public string modello {get; set;}
         public string targa {get; set;}
-        public PersoneViewModel persona {get; set;}
+        public int personaId {get; set;}
 
         public static AutoViewModel FromDataRow(DataRow dataRow)
         {
@@ -24,7 +24,7 @@ namespace Persone.Models.ViewModels
                 marca = Convert.ToString(dataRow["marca"]),
                 modello = Convert.ToString(dataRow["modello"]),
                 targa = Convert.ToString(dataRow["targa"]),
-                persona = new PersoneViewModel()
+                personaId = Convert.ToInt32(dataRow["personaId"]),
             };
             return autoViewModel;
         }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Data;
 
-namespace Persone.Models.InputModels
+namespace Persone.Models.InputModels.Persone
 {
     public class PersonaEditInputModel
     {
