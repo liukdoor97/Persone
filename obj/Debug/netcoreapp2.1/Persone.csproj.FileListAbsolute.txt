@@ -36,3 +36,4 @@ D:\SER\PROGETTI\Persone\obj\Debug\netcoreapp2.1\Razor\Views\Persone\create.g.csh
 D:\SER\PROGETTI\Persone\obj\Debug\netcoreapp2.1\Razor\Views\Persone\Edit.g.cshtml.cs
 D:\SER\PROGETTI\Persone\obj\Debug\netcoreapp2.1\Razor\Views\Auto\Index.g.cshtml.cs
 D:\SER\PROGETTI\Persone\obj\Debug\netcoreapp2.1\Razor\Views\Auto\Create.g.cshtml.cs
+D:\SER\PROGETTI\Persone\obj\Debug\netcoreapp2.1\Razor\Views\Auto\Detail.g.cshtml.cs

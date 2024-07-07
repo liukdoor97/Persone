@@ -10,7 +10,7 @@ namespace Persone.Models.Services.Application
 {
     public interface IAutoService
     {
-        List<AutoViewModel> GetListAuto();
+        List<AutoViewModel> GetListAuto();        
         AutoViewModel GetAuto(int id);
         AutoViewModel CreateAuto(AutoCreateInputModel input);
         

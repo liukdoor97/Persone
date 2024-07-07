@@ -27,6 +27,13 @@ namespace Persone.Controllers
             return View(auto);
         }
 
+        public IActionResult Detail(int id)
+        {
+            AutoViewModel viewModel = autoService.GetAuto(id);
+            ViewData["Title"] = $"{viewModel.marca} {viewModel.modello} {viewModel.targa}";
+            return View(viewModel);
+        }
+
         public IActionResult Create(int id)
         {
             ViewData["Title"] = "Nuova Auto";
