@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Persone.Models.ViewModels;
 using Persone.Models.Services.Infrastructure;
-using Persone.Models.InputModels;
+using Persone.Models.InputModels.Persone;
 using System.Data;
 
 
@@ -111,9 +111,7 @@ namespace Persone.Models.Services.Application
         {
             FormattableString query = $@"DELETE FROM persona WHERE id = {inputModel.id.ToString()};
             SELECT id, nome, cognome, eta FROM persona;";
-            var dataSet = db.Query(query);
-            var dataTable = dataSet.Tables[0];
-            var personeList = new List<PersoneViewModel>();
+            db.Command(query);
         }
 
     }

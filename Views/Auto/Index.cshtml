@@ -1,0 +1,21 @@
+@model List<AutoViewModel>
+
+<h1>
+    @ViewData["Title"]
+    <a class="btn btn-outline-primary btn-sm" asp-action="Create"><i class="fa fa-plus"></i> Crea nuova</a>
+
+</h1>
+@foreach (AutoViewModel auto in Model)
+{
+    <div>
+        <ul>
+            <li>marca: @auto.marca</li>
+            <li>modello: @auto.modello</li>
+            <li>targa: @auto.targa</li>
+            @* <li>appartenente a: @auto.persona.nome</li> *@
+        </ul>
+    </div>
+    <div class="col-md-2 d-flex align-items-center">
+        <a class="btn btn-outline-primary" asp-action="Detail" asp-route-id="@auto.id">Dettaglio</a>
+    </div>
+}
