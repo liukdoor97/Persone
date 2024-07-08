@@ -6,7 +6,7 @@ using Persone.Models.ViewModels;
 using Persone.Models.InputModels.Auto;
 
 
-namespace Persone.Models.Services.Application.Auto
+namespace Persone.Models.Services.Application.AutoApp
 {
     public interface IAutoService
     {
