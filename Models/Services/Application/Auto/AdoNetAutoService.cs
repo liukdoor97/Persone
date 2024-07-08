@@ -7,7 +7,7 @@ using Persone.Models.Services.Infrastructure;
 using Persone.Models.ViewModels;
 using Persone.Models.InputModels.Auto;
 
-namespace Persone.Models.Services.Application
+namespace Persone.Models.Services.Application.Auto
 {
     public class AdoNetAutoService : IAutoService
     {

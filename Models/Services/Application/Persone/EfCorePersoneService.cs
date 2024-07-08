@@ -8,11 +8,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Persone.Models.ViewModels;
 using Persone.Models.InputModels.Persone;
-using Persone.Models.InputModels.Auto;
 using Persone.Models.Services.Infrastructure;
 using Persone.Models.Entities;
 
-namespace Persone.Models.Services.Application
+namespace Persone.Models.Services.Application.Persone
 {
     public class EfCorePersoneService : IPersoneService
     {

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Persone.Models.ViewModels;
 using Persone.Models.InputModels.Persone;
 
-namespace Persone.Models.Services.Application
+namespace Persone.Models.Services.Application.Persone
 {
     public interface IPersoneService
     {

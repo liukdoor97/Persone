@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Persone.Models.Services.Application;
+using Persone.Models.Services.Application.Persone;
 using Persone.Models.ViewModels;
 using Persone.Models.InputModels.Persone;
 

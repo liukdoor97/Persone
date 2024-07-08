@@ -8,7 +8,7 @@ using Persone.Models.InputModels.Persone;
 using System.Data;
 
 
-namespace Persone.Models.Services.Application
+namespace Persone.Models.Services.Application.Persone
 {
     public class AdoNetPersonaService : IPersoneService
     {
