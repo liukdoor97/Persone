@@ -108,7 +108,11 @@ using Persone.Models.InputModels.Auto;
             WriteLiteral("</li>\r\n        </ul>\r\n    </div>\r\n    <div>");
             EndContext();
             BeginContext(229, 142, false);
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5728ba3222bd40d8a0b6405a6b9587f4", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7b4577ac9bdc4d3d866f14ec11cb9daf", async() => {
+>>>>>>> main
                 BeginContext(314, 53, true);
                 WriteLiteral("<i class=\"fa fa-plus\"></i>\r\n            Modifica dati");
                 EndContext();
@@ -144,7 +148,11 @@ using Persone.Models.InputModels.Auto;
             WriteLiteral("</div>\r\n    ");
             EndContext();
             BeginContext(383, 237, false);
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f32cfec6672f44b485fa6a462bec9e0d", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "38f8980b72e0418e82cd2088a3614e3f", async() => {
+>>>>>>> main
                 BeginContext(448, 165, true);
                 WriteLiteral("\r\n\r\n        <div><button class=\"btn btn-outline-primary btn-sm\"><i\r\n                    class=\"fa fa-plus\"></i>\r\n                Elimina Persona</button></div>\r\n    ");
                 EndContext();
@@ -183,7 +191,11 @@ using Persone.Models.InputModels.Auto;
             WriteLiteral("\r\n\r\n\r\n</section>\r\n<section>\r\n        ");
             EndContext();
             BeginContext(657, 164, false);
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "655c5aa68e404770824e7683c03de971", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "df8594e2a9b843f280ee965d314f032d", async() => {
+>>>>>>> main
                 BeginContext(767, 50, true);
                 WriteLiteral("<i class=\"fa fa-plus\"></i> Aggiungi una nuova auto");
                 EndContext();
@@ -270,7 +282,11 @@ using Persone.Models.InputModels.Auto;
             WriteLiteral("</a>\r\n            </div>\r\n            <div class=\"col-md-2 d-flex align-items-center\">\r\n                 ");
             EndContext();
             BeginContext(1288, 114, false);
+<<<<<<< HEAD
             __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "92fb87ef3c864de9a51aa436cf4ed995", async() => {
+=======
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6febf65b208845778bfac6bcffc2bb53", async() => {
+>>>>>>> main
                 BeginContext(1389, 9, true);
                 WriteLiteral("Dettaglio");
                 EndContext();
