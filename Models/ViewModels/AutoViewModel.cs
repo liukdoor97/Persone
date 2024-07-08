@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Persone.Models.ViewModels;
 using System.Data;
 using Persone.Models.Services.Infrastructure;
+using Persone.Models.Entities;
 
 namespace Persone.Models.ViewModels
 {
@@ -27,6 +28,18 @@ namespace Persone.Models.ViewModels
                 personaId = Convert.ToInt32(dataRow["personaId"]),
             };
             return autoViewModel;
+        }
+
+        public static AutoViewModel FromEntity(Auto auto)
+        {
+            return new AutoViewModel
+            {
+                id = auto.id,
+                marca = auto.marca,
+                modello = auto.modello,
+                targa = auto.targa
+                
+            };
         }
     }
 }

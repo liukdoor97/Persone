@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Data;
+using Persone.Models.Entities;
 
 namespace Persone.Models.InputModels.Persone
 {
     public class PersonaEditInputModel
     {
-        public int id {get; set;}
+        public int id { get; set; }
         public string nome { get; set; }
         public string cognome { get; set; }
         public int eta { get; set; }
@@ -23,6 +24,17 @@ namespace Persone.Models.InputModels.Persone
                 id = Convert.ToInt32(personeRow["id"])
             };
             return personaEditInputModel;
+        }
+
+        public static PersonaEditInputModel FromEntity(Persona persona)
+        {
+            return new PersonaEditInputModel
+            {
+                id = persona.id,
+                nome = persona.nome,
+                cognome = persona.cognome,
+                eta = persona.eta,
+            };
         }
     }
 }

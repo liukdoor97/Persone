@@ -11,6 +11,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Persone.Models.Services.Application;
 using Persone.Models.Services.Infrastructure;
+using Persone.Models.ViewModels;
+using Persone.Models.Entities;
 
 namespace Persone
 {
@@ -38,9 +40,12 @@ namespace Persone
             // sto indicando ad ASP.NET Core che, quando un componente dipende dall'interfaccia IPersoneService
             // crea un oggetto della classe PersoneService
             // services.AddTransient<IPersoneService, PersoneService>();
-            services.AddTransient<IPersoneService, AdoNetPersonaService>();
+            // services.AddTransient<IPersoneService, AdoNetPersonaService>();
             services.AddTransient<IDatabaseAccessor, SqliteDatabaseAccessor>();
             services.AddTransient<IAutoService, AdoNetAutoService>();
+            services.AddTransient<IPersoneService, EfCorePersoneService>();
+            //metodo per indicare che l'app usa la classe MyCourseDbContext come DbContext
+            services.AddDbContext<PersonaDbContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Data;
+using Persone.Models.Entities;
 
 namespace Persone.Models.ViewModels
 {
@@ -23,6 +24,18 @@ namespace Persone.Models.ViewModels
                 Auto = new List<AutoViewModel>()
             };
             return personaDetailViewModel;
+        }
+
+        public static PersoneDetailViewModel FromEntity(Persona persona){
+            return new PersoneDetailViewModel {
+                Id = persona.id,
+                nome = persona.nome,
+                cognome = persona.cognome,
+                eta = persona.eta,
+                Auto = persona.Auto
+                                    .Select(auto => AutoViewModel.FromEntity(auto))
+                                    .ToList()
+            };
         }
     }
 }
