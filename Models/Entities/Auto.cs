@@ -14,7 +14,7 @@ namespace Persone.Models.Entities
         public Persona Persona {get; set;}
         public int personaId { get; set; }
 
-        public Auto(string marca, string modello, string targa){
+        public Auto(string marca, string modello, string targa, int personaId){
             //controllo se i campi marca, modello e targa non sono vuoti
             if (string.IsNullOrWhiteSpace(marca))
             {
@@ -31,6 +31,7 @@ namespace Persone.Models.Entities
             this.marca = marca;
             this.modello = modello;
             this.targa = targa;
+            this.personaId = personaId;
         }
     }
 }

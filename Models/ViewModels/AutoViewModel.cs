@@ -37,8 +37,8 @@ namespace Persone.Models.ViewModels
                 id = auto.id,
                 marca = auto.marca,
                 modello = auto.modello,
-                targa = auto.targa
-                
+                targa = auto.targa,
+                personaId = auto.personaId
             };
         }
     }

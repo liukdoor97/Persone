@@ -15,7 +15,7 @@ namespace Persone.Models.Services.Application.Persone
 {
     public class EfCorePersoneService : IPersoneService
     {
-        //tramite questo oggetto eseguiremo le operazioni CRUD per le persone e le auto
+        //tramite questo oggetto eseguiremo le operazioni CRUD per le persone
         private readonly PersonaDbContext dbContext;
 
         public EfCorePersoneService(PersonaDbContext dbContext)

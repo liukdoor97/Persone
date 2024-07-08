@@ -6,8 +6,9 @@ using System.Data;
 using Persone.Models.Services.Infrastructure;
 using Persone.Models.ViewModels;
 using Persone.Models.InputModels.Auto;
+using Persone.Models.Entities;
 
-namespace Persone.Models.Services.Application.Auto
+namespace Persone.Models.Services.Application.AutoApp
 {
     public class AdoNetAutoService : IAutoService
     {

@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Persone.Models.Services.Application.Persone;
-using Persone.Models.Services.Application.Auto;
+using Persone.Models.Services.Application.AutoApp;
 using Persone.Models.Services.Infrastructure;
 using Persone.Models.ViewModels;
 using Persone.Models.Entities;
@@ -45,6 +45,7 @@ namespace Persone
             services.AddTransient<IDatabaseAccessor, SqliteDatabaseAccessor>();
             services.AddTransient<IAutoService, AdoNetAutoService>();
             services.AddTransient<IPersoneService, EfCorePersoneService>();
+            services.AddTransient<IAutoService, EfCoreAutoService>();
             //metodo per indicare che l'app usa la classe MyCourseDbContext come DbContext
             services.AddDbContext<PersonaDbContext>();
         }
