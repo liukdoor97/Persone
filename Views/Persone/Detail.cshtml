@@ -1,12 +1,10 @@
 @model PersoneDetailViewModel
 <section>
 
-    <div>
-        <ul>
-            <li>Nome: @Model.nome</li>
-            <li>Cognome: @Model.cognome</li>
-            <li>Età: @Model.eta</li>
-        </ul>
+    <div margin-left = "10">
+        <div>Nome: @Model.nome</div>
+        <div>Cognome: @Model.cognome</div>
+        <div>Età: @Model.eta</div>
     </div>
     <div><a class="btn btn-outline-primary btn-sm" asp-action="Edit" asp-route-id="@Model.Id"><i class="fa fa-plus"></i>
             Modifica dati</a></div>
