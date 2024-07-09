@@ -29,17 +29,17 @@ using Persone.Models.ViewModels;
 #line default
 #line hidden
 #line 4 "D:\SER\PROGETTI\Persone\Views\_ViewImports.cshtml"
-using Persone.Models.InputModels.Persone;
+using Persone.Models.InputModels.AutoInput;
 
 #line default
 #line hidden
 #line 5 "D:\SER\PROGETTI\Persone\Views\_ViewImports.cshtml"
-using Persone.Models.InputModels.Auto;
+using Persone.Models.InputModels.Persone;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"47297240309b67edf8c53ead8527aa80705bfee2", @"/Views/Auto/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"494c0b8cb83c724ff707f9066e3f07745103b566", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"151081b672e7ac1686ab414ac021eb5c16fb43b2", @"/Views/_ViewImports.cshtml")]
     public class Views_Auto_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<AutoViewModel>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("btn btn-outline-primary"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -122,7 +122,7 @@ Write(ViewData["Title"]);
             WriteLiteral("        </ul>\r\n    </div>\r\n    <div class=\"col-md-2 d-flex align-items-center\">\r\n        ");
             EndContext();
             BeginContext(416, 92, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d3cbd3b57954beebd885549f302b00a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "55cd368c6d6347ca96ef10df08b80028", async() => {
                 BeginContext(495, 9, true);
                 WriteLiteral("Dettaglio");
                 EndContext();

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Data;
 using Persone.Models.Services.Infrastructure;
 using Persone.Models.ViewModels;
-using Persone.Models.InputModels.Auto;
+using Persone.Models.InputModels.AutoInput;
 using Persone.Models.Entities;
 
 namespace Persone.Models.Services.Application.AutoApp
@@ -55,6 +55,16 @@ namespace Persone.Models.Services.Application.AutoApp
             int id = Convert.ToInt32(dataSet.Tables[0].Rows[0][0]);
             AutoViewModel auto = GetAuto(id);
             return auto;
+        }
+
+        public AutoEditInputModel GetAutoForEditing(int id)
+        {
+            return null;
+        }
+
+        public AutoViewModel EditAuto(AutoEditInputModel input)
+        {
+            return null;
         }
     }
 }

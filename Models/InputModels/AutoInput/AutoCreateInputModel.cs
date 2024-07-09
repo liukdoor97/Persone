@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Persone.Models.InputModels.Auto
+namespace Persone.Models.InputModels.AutoInput
 {
     public class AutoCreateInputModel
     {

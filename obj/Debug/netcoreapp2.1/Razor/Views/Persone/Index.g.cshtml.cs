@@ -29,17 +29,17 @@ using Persone.Models.ViewModels;
 #line default
 #line hidden
 #line 4 "D:\SER\PROGETTI\Persone\Views\_ViewImports.cshtml"
-using Persone.Models.InputModels.Persone;
+using Persone.Models.InputModels.AutoInput;
 
 #line default
 #line hidden
 #line 5 "D:\SER\PROGETTI\Persone\Views\_ViewImports.cshtml"
-using Persone.Models.InputModels.Auto;
+using Persone.Models.InputModels.Persone;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e48cd214cdf12d15d3eccf6582d50a89ef2987ad", @"/Views/Persone/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"494c0b8cb83c724ff707f9066e3f07745103b566", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"151081b672e7ac1686ab414ac021eb5c16fb43b2", @"/Views/_ViewImports.cshtml")]
     public class Views_Persone_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<PersoneViewModel>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("btn btn-outline-primary btn-sm"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -82,7 +82,7 @@ Write(ViewData["Title"]);
             WriteLiteral("\r\n        ");
             EndContext();
             BeginContext(73, 103, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f0a9e86651f14b348d8acee07fc0182c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "46fe936bf8534de5a13f0c83911ec76b", async() => {
                 BeginContext(135, 37, true);
                 WriteLiteral("<i class=\"fa fa-plus\"></i> Crea nuova");
                 EndContext();
@@ -143,7 +143,7 @@ Write(ViewData["Title"]);
             WriteLiteral("</li>\r\n        </ul>\r\n    </div>\r\n    <div class=\"col-md-2 d-flex align-items-center\">\r\n            ");
             EndContext();
             BeginContext(482, 95, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "238e9c2271664c2a9b2640f276308c96", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3c4f6479b95f4f45be2e5596ffc325f5", async() => {
                 BeginContext(564, 9, true);
                 WriteLiteral("Dettaglio");
                 EndContext();

@@ -33,5 +33,30 @@ namespace Persone.Models.Entities
             this.targa = targa;
             this.personaId = personaId;
         }
+
+        public void ChangeMarca(string newMarca)
+        {
+            if (string.IsNullOrWhiteSpace(newMarca))
+            {
+                throw new ArgumentException("L'Auto deve avere una marca");
+            }
+            marca = newMarca;
+        }
+        public void ChangeModello(string newModello)
+        {
+            if (string.IsNullOrWhiteSpace(newModello))
+            {
+                throw new ArgumentException("L'Auto deve avere un modello");
+            }
+            modello = newModello;
+        }
+        public void ChangeTarga(string newTarga)
+        {
+            if (string.IsNullOrWhiteSpace(newTarga))
+            {
+                throw new ArgumentException("L'Auto deve avere una targa");
+            }
+            targa = newTarga;
+        }
     }
 }
