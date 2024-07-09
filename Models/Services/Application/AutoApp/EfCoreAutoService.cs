@@ -2,13 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Security.Claims;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Persone.Models.Services.Infrastructure;
 using Persone.Models.ViewModels;
-using Persone.Models.InputModels.Auto;
 using Persone.Models.Entities;
+using Persone.Models.InputModels.AutoInput;
 
 namespace Persone.Models.Services.Application.AutoApp
 {
@@ -62,6 +63,28 @@ namespace Persone.Models.Services.Application.AutoApp
             var auto = new Auto(marca, modello, targa, personaId);
             dbContext.Add(auto); // tramite il metodo add eseguo una INSERT INTO nella tabella Courses aggiungendo il nuovo corso
             dbContext.SaveChanges();
+            return AutoViewModel.FromEntity(auto);
+        }
+
+        public AutoEditInputModel GetAutoForEditing(int id)
+        {
+            AutoEditInputModel viewModel = dbContext.Auto
+            .Where(auto => auto.id == id)
+            .Select(auto => AutoEditInputModel.FromEntity(auto)).FirstOrDefault();
+
+            return viewModel;
+
+        }
+
+        public AutoViewModel EditAuto(AutoEditInputModel input)
+        {
+            var auto = dbContext.Auto.Find(input.id);
+            auto.ChangeMarca(input.marca);
+            auto.ChangeModello(input.modello);
+            auto.ChangeTarga(input.targa);
+            dbContext.Update(auto);
+            dbContext.SaveChanges();
+
             return AutoViewModel.FromEntity(auto);
         }
     }
