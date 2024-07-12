@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Persone.Models.Services.Application.AutoApp;
 using Persone.Models.InputModels.AutoInput;
 using Persone.Models.ViewModels;
+using Persone.Models.Services.Application.Persone;
 
 namespace Persone.Controllers
 {
@@ -69,6 +70,15 @@ namespace Persone.Controllers
             ViewData["Title"] = "Modifica auto";
             return View(inputModel);
             
+        }
+
+        [HttpPost]
+        public IActionResult Delete(AutoDeleteInputModel inputModel)
+        {
+            AutoViewModel viewModel = autoService.GetAuto(inputModel.id);
+            autoService.DeleteAuto(inputModel);
+            // return RedirectToAction(nameof(Index));
+            return Redirect($"http://localhost:5000/Persone/Detail/{viewModel.personaId}");
         }
 
     }

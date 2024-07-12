@@ -66,5 +66,7 @@ namespace Persone.Models.Services.Application.AutoApp
         {
             return null;
         }
+
+        public void DeleteAuto(AutoDeleteInputModel input){}
     }
 }
