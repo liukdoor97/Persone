@@ -48,7 +48,8 @@ namespace Persone.Models.Services.Application.AutoApp
                 id = auto.id,
                 marca = auto.marca,
                 modello = auto.modello,
-                targa = auto.targa
+                targa = auto.targa,
+                personaId = auto.personaId
             }).Single();
 
             return viewModel;
@@ -86,6 +87,12 @@ namespace Persone.Models.Services.Application.AutoApp
             dbContext.SaveChanges();
 
             return AutoViewModel.FromEntity(auto);
+        }
+
+        public void DeleteAuto(AutoDeleteInputModel input){
+            var auto = dbContext.Auto.Find(input.id);
+            dbContext.Remove(auto);
+            dbContext.SaveChanges();
         }
     }
 }

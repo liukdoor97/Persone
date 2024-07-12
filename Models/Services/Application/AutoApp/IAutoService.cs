@@ -15,6 +15,7 @@ namespace Persone.Models.Services.Application.AutoApp
         AutoViewModel CreateAuto(AutoCreateInputModel input);
         AutoEditInputModel GetAutoForEditing(int id);
         AutoViewModel EditAuto(AutoEditInputModel input);
+        void DeleteAuto(AutoDeleteInputModel input);
         
     }
 }

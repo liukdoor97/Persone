@@ -4,19 +4,13 @@
 <form method="post">
     <div class="row">
         <div class="col-md-3 mb-3">
-            <input type="text" value="@Model.nome" asp-for="nome" class="form-control form-control-lg"
-                @* placeholder="Digita il nome" *@
-                >
+            <input type="text" value="@Model.nome" asp-for="nome" class="form-control form-control-lg">
         </div>
          <div class="col-md-3 mb-3">
-            <input type="text" value="@Model.cognome" asp-for="cognome" class="form-control form-control-lg"
-                @* placeholder="Digita il cognome" *@
-                >
+            <input type="text" value="@Model.cognome" asp-for="cognome" class="form-control form-control-lg">
         </div>
          <div class="col-md-3 mb-3">
-            <input type="text" value="@Model.eta" asp-for="eta" class="form-control form-control-lg"
-                @* placeholder="Digita l'età" *@
-                >
+            <input type="text" value="@Model.eta" asp-for="eta" class="form-control form-control-lg">
         </div>
         <div class="col-md-3">
             <button type="submit" class="btn btn-primary btn-lg btn-block"><i class="fas fa-rocket"></i> Modifica persona!</button>
